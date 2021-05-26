@@ -1,0 +1,9 @@
+{
+  "Buttons": [
+    {"icon": "volume-minus", "onclick": "Player.volume.down()"},
+    {"icon": "volume-plus", "onclick": "Player.volume.up()"},
+    {"icon": "previous", "onclick": "Player.back_song()"},
+    {"icon": "play", "onclick": "Player.play()"},
+    {"icon": "next", "onclick": "Player.next_song()"}
+  ]
+}
