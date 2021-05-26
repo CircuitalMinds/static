@@ -1,1 +1,1 @@
-# static
+# circuitalminds.github.io
