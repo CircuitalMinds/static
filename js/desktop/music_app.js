@@ -20,9 +20,9 @@ function getMusicButtons () {
     var settings = {
         "volume-minus": 'setVolume("minus")',
         "volume-plus": 'setVolume("plus")',
-        "previous": 'setVideo("back")',
+        "previous": 'setVideoTo("previous")',
         "play": 'setPlayer(Play.className.replace("mif-", ""))',
-        "next": 'setVideo("next")'
+        "next": 'setVideoTo("next")'
     };
     var button_ids = Object.keys(settings).reverse();
     for (var i = 0; i < button_ids.length; i++) {
