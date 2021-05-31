@@ -74,7 +74,7 @@ function initMusicApp () {
         title = Object.keys(videos)[0];
         url = videos[title];
         videoTitle.innerHTML = title;
-    	videoMedia.setAttribute('src', url);
+    	videoMedia.setAttribute('data-src', url);
     };
 };
 
@@ -125,6 +125,6 @@ function setVideoTo ( option ) {
     title = video_list[Index];
     url = music_app.video_list[title];    
     videoTitle.innerHTML = title;
-    videoMedia.setAttribute('data-src', url);
+    videoMedia.setAttribute('src', url);
     setPlayer('play');
 };
