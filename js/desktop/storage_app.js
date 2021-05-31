@@ -1,8 +1,8 @@
-function openFile ( filename, ext ) {
-    console.log(filename, ext);
+var storage_url = 'http://127.0.0.1:5100'
+function openFile ( to_path, filename, ext ) {
     if ( ext == 'py' ) {
         openConsoleApp();
-        var getFile = $.get( "/storage/" + filename );
+        var getFile = $.get( storage_url + '/get_from/' + to_path, {"filename": filename} );
         getFile.done( function ( data ) {
             var fileData = data;
             var textCode = document.getElementById("text-code");
@@ -16,6 +16,7 @@ function openFile ( filename, ext ) {
             textCode.innerHTML = codeString;
         });
     } else if ( ext == 'png' || ext == 'jpg' || ext == 'gif' ) {
+           var url_file = storage_url + '/get_from/' + to_path + "?filename=" + filename;
            var w = Desktop.createWindow({
                 resizeable: true,
                 draggable: true,
@@ -23,21 +24,20 @@ function openFile ( filename, ext ) {
                 width: "100%",
                 icon: "<span class='mif-" + Apps.storage_app.icon + "'></span>",
                 title: filename,
-                content: '<div class="p-2"><img src="/storage/' + filename + '" ></div>',
+                content: '<div class="p-2"><img src="' + url_file + '" ></div>',
                 clsContent: "bg-dark fg-teal"
         });
     } else if ( ext == 'mp4' ) {
            videoMedia = document.getElementById('video-media');
-           set_filename = filename.split('/');
-           full_path = '/storage/media/' + set_filename[0] + '?q=' + set_filename[1];
+           full_path = storage_url + '/get_from/' + to_path + '?filename=' + filename;
            if ( videoMedia == undefined ) {
                var videoObj = {
                    'data-loop-icon=': '"<span class=' + 'mif-loop2 fg-cyan' + '></span>"',
                    'data-mute-icon=': '"<span class=' + 'mif-volume-mute2 fg-cyan' + '></span>"',
-                   'data-play-icon=': '"<img src=' + '../static/images/metro/media_player/play.png' + '>"',
+                   'data-play-icon=': '"<img src=' + 'https://circuitalminds.github.io/static/images/metro/media_player/play.png' + '>"',
                    'data-role=': '"video-player"',
                    'data-src=': full_path,
-                   'data-stop-icon=': '"<img src=' + '../static/images/metro/media_player/stop.png' + '>"',
+                   'data-stop-icon=': '"<img src=' + 'https://circuitalminds.github.io/static/images/metro/media_player/stop.png' + '>"',
                    'data-volume=': '"0.9"',
                    'data-volume-high-icon=': '"<span class=' + 'mif-volume-high fg-cyan' + '></span>"',
                    'data-volume-low-icon=': '"<span class=' + 'mif-volume-low fg-cyan' + '></span>"',
@@ -55,7 +55,7 @@ function openFile ( filename, ext ) {
                     customButtons: Apps.storage_app.buttons,
                     width: "100%",
                     icon: "<span class='mif-" + Apps.storage_app.icon + "'></span>",
-                    title: decodeURI(set_filename[1]),
+                    title: decodeURI(filename),
                     content: '<div class="p-2">' + videoTemplate + '</div>',
                     clsContent: "bg-dark fg-teal"
                     });
@@ -77,11 +77,13 @@ function checkDir ( Dir ) {
 };
 
 function openDirectory ( dir_name ) {
-    var ext = checkDir(dir_name);
-    if ( ext != undefined ) {
-        openFile(dir_name, ext);
+    var dir_data = dir_name.split('/');
+    console.log(dir_data);
+    if ( dir_data.length > 1 ) {
+        var ext = dir_data[1].split('.')[1];
+        openFile(dir_data[0], dir_data[1], ext);
     } else {
-    var getTemplate = $.get( "/storage/" + dir_name, {"q": "template"} );
+    var getTemplate = $.get( '/storage_app/' + dir_name, {"q": "template"} );
         getTemplate.done( function ( data ) {
             Apps.storage_app.template = data['template'];
             var current_window = document.getElementById('storage-dir');
@@ -102,3 +104,4 @@ function openDirectory ( dir_name ) {
             });
         }
     };
+
