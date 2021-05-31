@@ -63,13 +63,6 @@ function initMusicApp () {
     getMusicTemplate();
     music_app.open_window = function () {
         openApp(music_app);
-        videoTitle = document.getElementById('video-title');
-        videoMedia = document.getElementById('video-media');
-        volumeMinus = document.getElementById('volume-minus');
-        volumePlus = document.getElementById('volume-plus');
-        Previous = document.getElementById('previous');
-        Play = document.getElementById('play');
-        Next = document.getElementById('next');
         videos = music_app.video_list;
         title = Object.keys(videos)[0];
         url = videos[title];
@@ -78,6 +71,13 @@ function initMusicApp () {
 };
 
 function getVideo ( title, url ) {
+    volumeMinus = document.getElementById('volume-minus');
+    volumePlus = document.getElementById('volume-plus');
+    Previous = document.getElementById('previous');
+    Play = document.getElementById('play');
+    Next = document.getElementById('next');
+    videoTitle = document.getElementById('video-title');
+    videoMedia = document.getElementById('video-media');
     videoTitle.innerHTML = title;
     videoMedia.setAttribute('src', url);
 };
