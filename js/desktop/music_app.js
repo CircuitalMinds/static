@@ -79,7 +79,7 @@ function getVideo ( title, url ) {
     videoTitle = document.getElementById('video-title');
     videoMedia = document.getElementById('video-media');
     videoTitle.innerHTML = title;
-    videoMedia.setAttribute('src', url);
+    videoMedia.setAttribute('data-src', url);
 };
 
 function setPlayer ( option ) {
