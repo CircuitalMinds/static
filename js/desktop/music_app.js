@@ -63,24 +63,21 @@ function initMusicApp () {
     getMusicTemplate();
     music_app.open_window = function () {
         openApp(music_app);
+        volumeMinus = document.getElementById('volume-minus');
+        volumePlus = document.getElementById('volume-plus');
+        Previous = document.getElementById('previous');
+        Play = document.getElementById('play');
+        Next = document.getElementById('next');
+        videoTitle = document.getElementById('video-title');
+        videoMedia = document.getElementById('video-media');    	
         videos = music_app.video_list;
         title = Object.keys(videos)[0];
         url = videos[title];
-        getVideo(title, url);
+        videoTitle.innerHTML = title;
+    	videoMedia.setAttribute('src', url);
     };
 };
 
-function getVideo ( title, url ) {
-    volumeMinus = document.getElementById('volume-minus');
-    volumePlus = document.getElementById('volume-plus');
-    Previous = document.getElementById('previous');
-    Play = document.getElementById('play');
-    Next = document.getElementById('next');
-    videoTitle = document.getElementById('video-title');
-    videoMedia = document.getElementById('video-media');
-    videoTitle.innerHTML = title;
-    videoMedia.setAttribute('data-src', url);
-};
 
 function setPlayer ( option ) {
     if ( option == 'stop' ) {
@@ -113,6 +110,8 @@ function setVideoFromList ( Index ) {
     title = Object.keys(videos)[Index];
     url = videos[title];
     getVideo(title, url);
+    videoTitle.innerHTML = title;
+    videoMedia.setAttribute('src', url);
 };
 
 function setVideoTo ( option ) {
@@ -124,7 +123,8 @@ function setVideoTo ( option ) {
         Index = Index - 1;
     };
     title = video_list[Index];
-    url = music_app.video_list[title];
-    getVideo(title, url);
+    url = music_app.video_list[title];    
+    videoTitle.innerHTML = title;
+    videoMedia.setAttribute('data-src', url);
     setPlayer('play');
 };
