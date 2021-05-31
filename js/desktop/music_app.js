@@ -5,68 +5,81 @@ var volumePlus;
 var Previous;
 var Play;
 var Next;
-var song_list;
 
-function searchList ( word ) {
-    const songs = Object.keys(Apps.music_app.song_data);
-    const filterItems = query => {
-      return songs.filter((el) =>
-        el.toLowerCase().indexOf(query.toLowerCase()) > -1
-      );
+var music_app = {
+    video_list: {},
+    template: {
+        title: 'Music App',
+        content: '',
+        buttons: [],
+        icon: "windows"
+    }
+};
+
+function getMusicButtons () {
+    var settings = {
+        "volume-minus": 'setVolume("minus")',
+        "volume-plus": 'setVolume("plus")',
+        "previous": 'setVideo("back")',
+        "play": 'setPlayer(Play.className.replace("mif-", ""))',
+        "next": 'setVideo("next")'
     };
-    buildRows(filterItems(word));
+    var button_ids = Object.keys(settings).reverse();
+    for (var i = 0; i < button_ids.length; i++) {
+        var button = {};
+        button.html = '<span id="' + button_ids[i] + '" class="mif-' + button_ids[i] + '"></span>';
+        button.onclick = settings[button_ids[i]];
+        music_app.template.buttons.push(button);
+    };
 };
 
 
-function buildRows ( data_list ) {
-    var Rows = '<ul class="feed-list bg-darkTeal fg-light">LIST</ul>';
-    var Row = '<li class="button card-content bg-darkTeal bg-dark-hover fg-light" onclick="SRC" >';
-    Row += 'CONTENT</li>';
-    var songList = '<li class="title">Video Playlist</li>';
-    for ( var s = 0; s < data_list.length; s++ ) {
-        Preview = '<img class="avatar" src="">';
-        Src = 'setVideoFromList(' + Object.keys(Apps.music_app.song_data).indexOf(data_list[s]).toString() + ')';
-        Title = '<span class=label>' + data_list[s] + '</span>';
-        Duration = '<span class=second-label>10 min</span>';
-        content = Row.replace('CONTENT', Preview + Title + Duration);
-        songList += content.replace('SRC', Src);
+function getVideos () {
+    var containers = ['music_a', 'music_b', 'music_c', 'music_d'];
+    for (var i = 0; i < containers.length; i++) {
+        git_location = 'https://raw.githubusercontent.com/circuitalmynds/' + containers[i] + '/main/video_list.json';
+        var getVideoList = $.get( git_location );
+        getVideoList.done( function( data ) {
+            var videos = JSON.parse(data).video_list;
+            var names = Object.keys(videos);
+            for (var j = 0; j < names.length; j++) {
+                music_app.video_list[names[j]] = videos[names[j]];
+            };
+        });
     };
-    song_list = Rows.replace('LIST', songList);
-    document.getElementById('song_list').innerHTML = song_list;
-}
+};
 
-function openMusicApp () {
-    var getApp = $.get( "/music_app" );
-    getApp.done( function( data ) {
-            Apps.music_app.template = data['template'];
-            Apps.music_app.song_data = data['song_data'];
+function getMusicTemplate () {
+    git_location = 'https://raw.githubusercontent.com/CircuitalMinds/templates/main/applications/music_app.html';
+    var getTemplate = $.get( git_location );
+    getTemplate.done( function( data ) {
+        music_app.template.content = data;
+    });
+    getMusicButtons();
+};
 
-            var w = Desktop.createWindow({
-                resizeable: true,
-                draggable: true,
-                customButtons: Apps.music_app.buttons,
-                width: "100%",
-                icon: "<span class='mif-" + Apps.music_app.icon + "'></span>",
-                title: Apps.music_app.title,
-                content: "<div class='p-2'>" + Apps.music_app.template + "</div>",
-                clsContent: "bg-dark fg-teal"
-            });
-            volumeMinus = document.getElementById('volume-minus');
-            volumePlus = document.getElementById('volume-plus');
-            Previous = document.getElementById('previous');
-            Play = document.getElementById('play');
-            Next = document.getElementById('next');
+function initMusicApp () {
+    getVideos();
+    getMusicTemplate();
+    music_app.open_window = function () {
+        openApp(music_app);
+        videoTitle = document.getElementById('video-title');
+        videoMedia = document.getElementById('video-media');
+        volumeMinus = document.getElementById('volume-minus');
+        volumePlus = document.getElementById('volume-plus');
+        Previous = document.getElementById('previous');
+        Play = document.getElementById('play');
+        Next = document.getElementById('next');
+        videos = music_app.video_list;
+        title = Object.keys(videos)[0];
+        url = videos[title];
+        getVideo(title, url);
+    };
+};
 
-            var data_list = Object.keys(Apps.music_app.song_data);
-
-            videoTitle = document.getElementById('video-title');
-            videoMedia = document.getElementById('video-media');
-            video_title = data_list[0];
-            video_url = Apps.music_app.song_data[video_title];
-            videoTitle.innerHTML = video_title;
-            videoMedia.setAttribute('data-src', video_url);
-            buildRows(data_list);
-      });
+function getVideo ( title, url ) {
+    videoTitle.innerHTML = title;
+    videoMedia.setAttribute('src', url);
 };
 
 function setPlayer ( option ) {
@@ -95,26 +108,23 @@ function setVolume ( option ) {
     videoMedia.setAttribute('data-volume', volume / 100);
 };
 
-function setVideoFromList ( Id ) {
-    Apps.music_app.current_song = Id - 1;
-    setVideo('next');
+function setVideoFromList ( Index ) {
+    videos = music_app.video_list;
+    title = Object.keys(videos)[Index];
+    url = videos[title];
+    getVideo(title, url);
 };
 
-function setVideo( option ) {
-    if ( option == 'back' ) {
-        Apps.music_app.current_song -= 1;
-    } else if ( option == 'next' ) {
-        Apps.music_app.current_song += 1;
+function setVideoTo ( option ) {
+    video_list = Object.keys(music_app.video_list);
+    Index = video_list.indexOf(videoTitle.textContent);
+    if ( option == 'next' ) {
+        Index = Index + 1;
+    } else if ( option == 'previous' ) {
+        Index = Index - 1;
     };
-    if ( Apps.music_app.current_song < 0 ) {
-        Apps.music_app.current_song = 0;
-    } else if ( Apps.music_app.current_song > Object.keys(Apps.music_app.song_data).length - 1) {
-        Apps.music_app.current_song = Object.keys(Apps.music_app.song_data).length - 1;
-    };
-    var video_title = Object.keys(Apps.music_app.song_data)[Apps.music_app.current_song];
-    var video_url = Apps.music_app.song_data[video_title];
-    videoTitle.innerHTML = video_title;
-    videoMedia.setAttribute('src', video_url);
-    Play.className = "mif-stop";
-    videoMedia.play();
+    title = video_list[Index];
+    url = music_app.video_list[title];
+    getVideo(title, url);
+    setPlayer('play');
 };
