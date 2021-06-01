@@ -35,7 +35,7 @@ function getMusicButtons () {
 
 
 function getVideos () {
-    var containers = ['music_a', 'music_b', 'music_c', 'music_d'];
+    const containers = 'abcdefghijklmnopqrstuvwxyz'.split('').map((c) => 'music_' +  c);
     for (var i = 0; i < containers.length; i++) {
         git_location = 'https://raw.githubusercontent.com/circuitalmynds/' + containers[i] + '/main/video_list.json';
         var getVideoList = $.get( git_location );
