@@ -53,3 +53,27 @@ $(function(){
         $(".start-screen")[0].scrollLeft += scrollStep * up;
     });
 })
+
+var start = {
+    template: {
+        title: 'Start',
+        buttons: [],
+        icon: 'windows',
+        content: ''
+    }
+};
+
+function getStartTemplate () {
+    start.template.buttons = getStorageButtons();
+    git_location = 'https://raw.githubusercontent.com/CircuitalMinds/templates/main/start.html';
+    var getTemplate = $.get( git_location );
+    getTemplate.done( function( data ) {
+        start.template.content = data;
+    });
+};
+
+getStartTemplate();
+
+start.open_window = function () {
+   openApp(start);
+}

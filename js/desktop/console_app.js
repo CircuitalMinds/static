@@ -1,6 +1,24 @@
 var stdIn;
 var stdOut;
 
+var console_app = {
+    template: {
+        title: 'Console App',
+        buttons: [],
+        icon: 'windows',
+        content: ''
+    }
+};
+
+function getConsoleApp () {
+    console_app.template.buttons = getStorageButtons();
+    git_location = 'https://raw.githubusercontent.com/CircuitalMinds/templates/main/applications/console_app.html';
+    var getTemplate = $.get( git_location );
+    getTemplate.done( function( data ) {
+        console_app.template.content = data;
+    });
+};
+
 function runScript () {
     var input_code = document.getElementById('input-code').value;
     stdIn = document.getElementById("std-in");
@@ -16,3 +34,8 @@ function runScript () {
     });
 };
 
+getConsoleApp();
+
+console_app.open_window = function () {
+   openApp(console_app);
+}

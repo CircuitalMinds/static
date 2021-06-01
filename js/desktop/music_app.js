@@ -128,3 +128,5 @@ function setVideoTo ( option ) {
     videoMedia.setAttribute('src', url);
     setPlayer('play');
 };
+
+initMusicApp()
