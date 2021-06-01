@@ -1,5 +1,4 @@
-var APP = "http://127.0.0.1:5000";
-var API = "http://127.0.0.1:5001";
+var APP = "https://circuitalminds.github.io/templates";
 
 var USER_ONLINE = "Alan Matzumiya";
 
