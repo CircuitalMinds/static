@@ -1,5 +1,5 @@
 var storage_app = {
-    url: 'http://127.0.0.1:5100',
+    url: '',
     directories: {},
     extensions: ['.mp4', '.png', '.jpg', '.jpeg', '.gif', '.py', '.json', '.js', '.html'],
     template: {}
