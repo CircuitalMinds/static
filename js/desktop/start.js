@@ -54,26 +54,26 @@ $(function(){
     });
 })
 
-var start = {
-    template: {
-        title: 'Start',
-        buttons: [],
-        icon: 'windows',
-        content: ''
-    }
-};
-
-function getStartTemplate () {
-    start.template.buttons = getStorageButtons();
-    git_location = 'https://raw.githubusercontent.com/CircuitalMinds/templates/main/start.html';
-    var getTemplate = $.get( git_location );
-    getTemplate.done( function( data ) {
-        start.template.content = data;
+function showImage ( image ){
+    Metro.dialog.create({
+        title: "Animation demo",
+        content: '<img src="' + image + '" >',
+        onShow: function(){
+            var el = $(this);
+            el.addClass("ani-swoopInTop");
+            setTimeout(function(){
+                el.removeClass("ani-swoopInTop");
+            }, 500);
+        },
+        onHide: function(){
+            console.log("hide");
+            var el = $(this);
+            el.addClass("ani-swoopOutTop");
+            setTimeout(function(){
+                //el.removeClass("ani-swoopOutTop");
+            }, 5000);
+        }
     });
-};
-
-getStartTemplate();
-
-start.open_window = function () {
-   openApp(start);
 }
+
+
