@@ -73,8 +73,6 @@ function initMusicApp () {
         videos = music_app.video_list;
         title = Object.keys(videos)[0];
         url = videos[title];
-        videoTitle.innerHTML = title;
-    	videoMedia.setAttribute('data-src', url);
     };
 };
 
