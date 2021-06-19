@@ -14,27 +14,13 @@ function config_searcher ( app ) {
         return strObj;
     };
 
-    app.searcher.Filter = function ( query, array_data ) {
-        data = {};
-        query_data = [];
-        for ( var j = 0; j < query.length + 1; j++ ) {data[j] = [];};
-        for ( element of array_data ) {            
-            result = this.WordMatches(query.toLowerCase(), element.toLowerCase());
-            data[result].push(element);
-        };
-        matches = Object.keys(data).sort().reverse();
-        for ( m of matches ) {
-            if ( data[m].length > 0 ) {for ( r of data[m] ) {query_data.push(r)}};
-        };
-        return query_data;
-    };
-
-    app.searcher.WordMatches = function ( word, target ) {
-        matches = 0;
-        for ( var i = 0; i < word.length; i++ ) {
-            if ( word[i] == target[i] ) {matches += 1} else {break}
-        };
-        return matches;
+    app.searcher.get_matches = function ( query, targets ) {
+	matches = [];
+    	for ( target of targets ) {
+    	    x = target.toLowerCase();    	    
+    	    if ( x.match(query) != null ) {matches.push(target)};
+    	};
+    	return matches;
     };
 
     app.searcher.get_query = function ( q ) {
@@ -44,7 +30,7 @@ function config_searcher ( app ) {
             q = q.toLowerCase()
             if ( app.videos[q[0]] != undefined ) {
                 query_data = Object.keys(app.videos[q[0]]);
-                filter_data = this.Filter(q, query_data);
+                filter_data = this.get_matches(q, query_data);
                 if ( filter_data.length == 0 ) {
                     query_result += this.Template('search not found', default_image)
                 } else {
