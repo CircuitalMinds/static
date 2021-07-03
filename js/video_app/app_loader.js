@@ -14,7 +14,6 @@ APP.container_url = function ( ID ) {
 };
 APP.videos = {};
 'abcdefghijklmnopqrstuvwxyz'.split('').map( ID => APP.videos[ID] = {} );
-'abcdefghijklmnopqrstuvwxyz'.split('').map( ID => APP.videos[ID + 1] = {} );
 
 APP.GetData = function ( Id ) { return $("#" + Id)[0] };
 
@@ -38,7 +37,10 @@ function GetVideosRequest ( ID ) {
 };
 
 APP.get_videos = function () {
-    for ( ID in APP.videos ) {GetVideosRequest(ID)}
+    for ( ID in APP.videos ) {
+        GetVideosRequest(ID);
+        GetVideosRequest(ID + 1);        
+    }
 };
 APP.player = APP.GetData('video-media');
 APP.get_current_video = function () {
