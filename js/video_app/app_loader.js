@@ -10,10 +10,11 @@ APP.templates = {
     previews: APP.git_url + "/templates/previews"
 };
 APP.container_url = function ( ID ) {
-    return 'https://raw.githubusercontent.com/circuitalmynds/music_' + ID + '/main/info.json'
+    return 'https://raw.githubusercontent.com/circuitalmynds/music_' + ID + '/main/video_list.json'
 };
 APP.videos = {};
 'abcdefghijklmnopqrstuvwxyz'.split('').map( ID => APP.videos[ID] = {} );
+'abcdefghijklmnopqrstuvwxyz'.split('').map( ID => APP.videos[ID + 1] = {} );
 
 APP.GetData = function ( Id ) { return $("#" + Id)[0] };
 
@@ -26,7 +27,7 @@ function GetVideosRequest ( ID ) {
     request.send();
     request.onload = function() {
         var data = request.response;
-        videos = data.video_list;
+        videos = data;
         for ( title in videos ) {
             APP.videos[ID][title] = {
                 url: videos[title].url,
