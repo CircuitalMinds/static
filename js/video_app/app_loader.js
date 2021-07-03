@@ -17,8 +17,12 @@ APP.videos = {};
 
 APP.GetData = function ( Id ) { return $("#" + Id)[0] };
 
-function GetVideosRequest ( ID ) {
-    var url = APP.container_url(ID);
+function GetVideosRequest ( ID, s ) {  
+  IDs = ID;
+  if ( s > 0 ) {
+    IDs = IDs + s;
+  };
+  var url = APP.container_url(IDs);
 	var requestURL = url;
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
@@ -38,8 +42,8 @@ function GetVideosRequest ( ID ) {
 
 APP.get_videos = function () {
     for ( ID in APP.videos ) {
-        GetVideosRequest(ID);
-        GetVideosRequest(ID + 1);        
+        GetVideosRequest(ID, 0);
+        GetVideosRequest(ID, 1);        
     }
 };
 APP.player = APP.GetData('video-media');
