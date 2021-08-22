@@ -1,0 +1,23 @@
+.bg-white {
+  background-color: white;
+}
+.fg-white {
+  color: white;
+}
+
+.fg-darklight {
+  color: #2C2F36;
+}
+
+.fg-teal {
+  color: #1abc9c;
+}
+
+.bg-darklight {
+  background-color: #2C2F36;
+}
+
+.bg-teal {
+  background-color: #1abc9c;
+}
+

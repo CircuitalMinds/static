@@ -1,0 +1,18 @@
+.bg-cover {
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #1abc9c;
+}
+
+.switch .check::after {
+    background: teal;
+    border-color: dark;
+}
+.switch input[type="checkbox"]:checked ~ .check {
+    background: white;
+}
+.switch input[type="checkbox"]:checked ~ .check::after {
+    border-color: teal;
+    background: dark;
+}
