@@ -1,3 +1,11 @@
+function open_form() {
+    $("#myForm")[0].style.display = "block";
+  }
+  
+  function close_form() {
+    $("#myForm")[0].style.display = "none";
+  }
+
 function object_size ( obj ) {
     return [
       obj.clientWidth, obj.clientHeight
