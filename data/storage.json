@@ -1,0 +1,88 @@
+{
+    "content": {
+        "files": [],
+        "folders": [
+            {
+                "files": [
+                    {
+                        "date": "Thu Sep  9 21:00:59 2021",
+                        "filename": "cv.pdf",
+                        "size": 0.207863808
+                    }
+                ],
+                "folders": [],
+                "name": "documents",
+                "path": "storage/documents"
+            },
+            {
+                "files": [
+                    {
+                        "date": "Wed Nov 24 03:13:42 2021",
+                        "filename": "my_script.py",
+                        "size": 1.5360000000000002e-05
+                    }
+                ],
+                "folders": [],
+                "name": "scripts",
+                "path": "storage/scripts"
+            },
+            {
+                "files": [
+                    {
+                        "date": "Thu Sep  9 21:00:59 2021",
+                        "filename": "test.json",
+                        "size": 9.1136e-05
+                    }
+                ],
+                "folders": [],
+                "name": "data",
+                "path": "storage/data"
+            },
+            {
+                "files": [
+                    {
+                        "date": "Mon Nov 22 12:05:27 2021",
+                        "filename": "Giorgio_Moroder_-_74_Is_the_New_24-7u5c-Qndqio.mp4",
+                        "size": 23.652170752
+                    },
+                    {
+                        "date": "Fri Sep 10 13:41:53 2021",
+                        "filename": "Give_Life_Back_to_Music-zKSsP2084nU.mp4",
+                        "size": 4.556391424
+                    }
+                ],
+                "folders": [],
+                "name": "videos",
+                "path": "storage/videos"
+            },
+            {
+                "files": [
+                    {
+                        "date": "Thu Sep  9 21:00:59 2021",
+                        "filename": "zeta_function.gif",
+                        "size": 8.759566336
+                    },
+                    {
+                        "date": "Thu Sep  9 21:00:59 2021",
+                        "filename": "mandelbrot.gif",
+                        "size": 2.943609856
+                    },
+                    {
+                        "date": "Thu Sep  9 21:00:59 2021",
+                        "filename": "julia.gif",
+                        "size": 5.862964224000001
+                    },
+                    {
+                        "date": "Mon Nov 22 11:48:08 2021",
+                        "filename": "giorgio.jpg",
+                        "size": 0.014980096000000002
+                    }
+                ],
+                "folders": [],
+                "name": "pictures",
+                "path": "storage/pictures"
+            }
+        ]
+    },
+    "total_size": 45.997652992000006
+}

@@ -1,0 +1,26 @@
+{
+    "thesis": [
+        {
+          "author": "MATZUMIYA ZAZUETA, ALAN DANIEL",
+          "date": "2016-06",
+          "url": "https://investigadores.unison.mx/es/studentTheses/carcaterizaci%C3%B3n-y-evaluaci%C3%B3n-de-las-propiedades-bioactivas-de-una",
+          "description": "Tesis de ingeniería química",
+          "sponsorship": "Universidad de Sonora - División de Ingeniería",
+          "publisher": "Universidad de Sonora",
+          "classification": "INGENIERÍA Y TECNOLOGÍA",
+          "title": "Caracterización y evaluación de las propiedades bioactivas de una mezcla de biocompósitos de hidroxiapatita/β-wollastonita\npreparados por el método sol gel: sometidos a tratamientos térmicos diferentes",
+          "type": "Tesis de licenciatura"
+        },
+        {
+          "author": "MATZUMIYA ZAZUETA, ALAN DANIEL",
+          "date": "2020-09",
+          "url": "https://github.com/alanmatzumiya/spectral-methods/raw/master/docs/Thesis.pdf",
+          "description": "Degree Thesis in Mathematics",
+          "sponsorship": "Universidad de Sonora - División de Ciencias Exactas y Naturales",
+          "publisher": "Universidad de Sonora",
+          "classification": "Applied Mathematics and Computation",
+          "title": "Numerical solutions for Burgers' Equation in its stochastic and deterministic versions using spectral methods",
+          "type": "Degree Thesis"
+        }
+    ]
+}
