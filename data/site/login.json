@@ -1,0 +1,9 @@
+{
+    "id": "login",
+    "modal": {
+        "header": "<h3>Login</h3>",
+        "body": "<div class=\"container\"><span>Username: <input type=\"text\"></span> <span> Password: <input type=\"text\"></span></div>",
+        "footer": "",
+        "btn_id": "get-login"
+    }
+}
