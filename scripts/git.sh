@@ -2,15 +2,15 @@
 
 
 OPTION=$1
-F_PATH=$2
+FOLDER_PATH=$2
 BRANCH=$3
 URL=$4
 
 if [[ $OPTION == "clone" ]];
 then
-  cd $F_PATH && git clone -b $BRANCH $URL
+  cd $FOLDER_PATH && git clone -b $BRANCH $URL
 elif [[ $OPTION == "push" ]];
 then
-  cd $F_PATH && git add . && git commit -m 'autocommit'
-  cd $F_PATH && git push
+  cd $FOLDER_PATH && git add . && git commit -m 'autocommit'
+  cd $FOLDER_PATH && git push
 fi
