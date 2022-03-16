@@ -2,7 +2,6 @@ from json import load, dumps, loads
 from os import listdir, stat
 from os.path import isfile, isdir, join, getctime
 from time import ctime
-from sys import argv
 
 
 class Folder:
@@ -48,7 +47,9 @@ class Folder:
 
     def size(self, name=None):
         factor = 1024 * 10e-10
-        get_size = lambda *ys: stat(join(self.path, *ys)).st_size * factor
+
+        def get_size(f_name):
+            return stat(join(self.path, f_name)).st_size * factor
         if name:
             if self.isfile(name):
                 return get_size(name)
@@ -107,20 +108,35 @@ class Json:
                 f.write(to_json)
 
 
-if __name__ == '__main__':
-    args = argv[1:]
-    if "storage" in args:
-        folder = Folder("storage")
-        folder_data = dict(total_size=folder.size()["total_size"], content=dict(files=[], folders=[]))
-        for x in folder.dirs:
-            y = folder.open_dir(x)
-            xdata = dict(name=x, path=y.path, folders=[], files=[])
-            for y_name, y_path in y.files.items():
-                xdata["files"].append({
-                    "name": y_name,
-                    "size": y.size(y_name),
-                    "date": y.date(y_name)
-                })
-            folder_data["content"]["folders"].append(xdata)
-        Json("data/storage.json", new=True).update(**folder_data)
+class Storage:
+    total_size = 0.0
+    content = {
+        "files": [], "folders": []
+    }
 
+    def __init__(self):
+        storage = Folder("storage")
+        self.file = Json("data/storage.json", new=True)
+        self.path = storage.path
+        self.total_size = storage.size()["total_size"]
+        for f_name in storage.dirs:
+            self.add_content(f_name)
+        self.file.update(**{
+            "total_size": self.total_size,
+            "content": self.content
+        })
+
+    def add_content(self, name):
+        sub_path = join(self.path, name)
+        sub_folder = Folder(sub_path)
+        self.content["folders"].append({
+            "name": name, "path": sub_path,
+            "files": [
+                {
+                    "name": xi,
+                    "size": sub_folder.size(xi),
+                    "date": sub_folder.date(xi)
+                } for xi in sub_folder.files
+            ],
+            "folders": []
+        })
