@@ -1,0 +1,51 @@
+{
+    "site":
+        {
+        "folders": {
+            "template_folder": "./",
+            "static_folder": "/"
+        },
+        "server": {
+            "host": "192.168.50.7",
+            "port": 5000,
+            "debug": true
+        },
+        "view": {
+            "methods": ["GET", "POST"],
+            "routes": [],
+            "data": {}
+        }
+    },
+    "static": {
+        "folders": {
+            "template_folder": "./",
+            "static_folder": "/"
+        },
+        "server": {
+            "host": "192.168.50.7",
+            "port": 5100,
+            "debug": true
+        },
+        "view": {
+            "methods": ["GET", "POST"],
+            "routes": ["storage", "data"],
+            "data": {}
+        }
+    },
+    "templates": {
+        "folders": {
+            "template_folder": "./",
+            "static_folder": "/"
+        },
+        "server": {
+            "host": "192.168.50.7",
+            "port": 5200,
+            "debug": true
+        },
+        "view": {
+            "methods": ["GET", "POST"],
+            "routes": ["api", "app"],
+            "data": {}
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+
+    "logo": "https://avatars.githubusercontent.com/u/75770878?s=400&u=85be0810ccfb5f56a393f71cf971021f087c5a59&v=4",
+    "metadata": {
+        "with_name": [
+            {
+                "content": "alanmatzumiya",
+                "name": "author"
+            },
+            {
+                "content": "From Here To Eternity",
+                "name": "description"
+            },
+            {
+                "content": "index, follow",
+                "name": "robots"
+            },
+            {
+                "content": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+                "name": "viewport"
+            }
+        ],
+        "with_property": [
+            {
+                "content": 772020893629559,
+                "property": "fb:app_id"
+            },
+            {
+                "content": "From Here To Eternity",
+                "property": "og:description"
+            },
+            {
+                "content": "CircuitalMinds",
+                "property": "og:site_name"
+            },
+            {
+                "content": "CircuitalMinds",
+                "property": "og:title"
+            },
+            {
+                "content": "website",
+                "property": "og:type"
+            }
+        ]
+    },
+    "favicon": {
+        "filename": "favicon.html",
+        "url": "https://circuitalminds.github.io/favicon.ico",
+        "ico": {
+            "rel": "icon",
+            "sizes": [16, 32, 96]
+        },
+        "android": {
+            "rel": "icon",
+            "sizes": [36, 45, 72, 96, 144, 192]
+        },
+        "apple": {
+            "rel": "apple-touch-icon",
+            "sizes": [0, 57, 60, 72, 76, 114, 120, 144, 152, 180]
+        },
+        "meta": {
+            "color": {"name": "msapplication-TileColor", "content": "#1abc9c"},
+            "image": {"name": "msapplication-TileImage","sizes": [70, 144, 150, 310]},
+            "theme": {"name": "theme-color", "content": "#1abc9c"}
+        }
+    }
+}

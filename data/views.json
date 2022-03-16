@@ -1,0 +1,20 @@
+{
+    "base": "index.html",
+    "routes": {
+        "home": {
+            "title": "Home"
+        },
+        "login": {
+            "title": "Login",
+            "includes": [
+                "user/login.html"
+            ]
+        },
+        "register": {
+            "title": "Register",
+            "includes": [
+                "user/register.html"
+            ]
+        }
+    }
+}

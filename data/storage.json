@@ -5,8 +5,8 @@
             {
                 "files": [
                     {
-                        "date": "Thu Sep  9 21:00:59 2021",
-                        "filename": "cv.pdf",
+                        "date": "Tue Mar 15 23:03:07 2022",
+                        "name": "cv.pdf",
                         "size": 0.207863808
                     }
                 ],
@@ -17,8 +17,8 @@
             {
                 "files": [
                     {
-                        "date": "Wed Nov 24 03:13:42 2021",
-                        "filename": "my_script.py",
+                        "date": "Tue Mar 15 23:03:14 2022",
+                        "name": "my_script.py",
                         "size": 1.5360000000000002e-05
                     }
                 ],
@@ -29,8 +29,8 @@
             {
                 "files": [
                     {
-                        "date": "Thu Sep  9 21:00:59 2021",
-                        "filename": "test.json",
+                        "date": "Tue Mar 15 23:03:07 2022",
+                        "name": "test.json",
                         "size": 9.1136e-05
                     }
                 ],
@@ -41,13 +41,13 @@
             {
                 "files": [
                     {
-                        "date": "Mon Nov 22 12:05:27 2021",
-                        "filename": "Giorgio_Moroder_-_74_Is_the_New_24-7u5c-Qndqio.mp4",
+                        "date": "Tue Mar 15 23:03:14 2022",
+                        "name": "Giorgio_Moroder_-_74_Is_the_New_24-7u5c-Qndqio.mp4",
                         "size": 23.652170752
                     },
                     {
-                        "date": "Fri Sep 10 13:41:53 2021",
-                        "filename": "Give_Life_Back_to_Music-zKSsP2084nU.mp4",
+                        "date": "Tue Mar 15 23:03:14 2022",
+                        "name": "Give_Life_Back_to_Music-zKSsP2084nU.mp4",
                         "size": 4.556391424
                     }
                 ],
@@ -58,23 +58,23 @@
             {
                 "files": [
                     {
-                        "date": "Thu Sep  9 21:00:59 2021",
-                        "filename": "zeta_function.gif",
+                        "date": "Tue Mar 15 23:03:14 2022",
+                        "name": "zeta_function.gif",
                         "size": 8.759566336
                     },
                     {
-                        "date": "Thu Sep  9 21:00:59 2021",
-                        "filename": "mandelbrot.gif",
+                        "date": "Tue Mar 15 23:03:14 2022",
+                        "name": "mandelbrot.gif",
                         "size": 2.943609856
                     },
                     {
-                        "date": "Thu Sep  9 21:00:59 2021",
-                        "filename": "julia.gif",
+                        "date": "Tue Mar 15 23:03:14 2022",
+                        "name": "julia.gif",
                         "size": 5.862964224000001
                     },
                     {
-                        "date": "Mon Nov 22 11:48:08 2021",
-                        "filename": "giorgio.jpg",
+                        "date": "Tue Mar 15 23:03:14 2022",
+                        "name": "giorgio.jpg",
                         "size": 0.014980096000000002
                     }
                 ],
@@ -84,5 +84,5 @@
             }
         ]
     },
-    "total_size": 45.997652992000006
+    "total_size": 0.02097152
 }

@@ -1,0 +1,190 @@
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 150px;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* form-container style */
+/* The popup chat - hidden by default */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 1px solid #1abc9c;
+    z-index: 9;
+}
+
+.button-chat {
+    background-color: #555; color: white;
+    padding: 16px 20px; border: none;
+    cursor: pointer; opacity: 0.8;
+    transition-duration: 0.8s; position: fixed;
+    bottom: 23px; right: 28px; width: 280px;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: #1abc9c;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+/* sliders */
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #2C2F36;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #1abc9c;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #1abc9c;
+    cursor: pointer;
+}
+
+.button {
+    position: relattive;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 10px 250x;
+    display: inline-block;
+    border-radius: 0.35em;
+    padding: 10px 30px;
+    background-color: #1abc9c;
+    border: 0;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.show {
+    background-color: #2C2F36;
+    color: #1abc9c;
+    border: 2px solid #1abc9c;
+}
+
+.show:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.bg-cover {
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #1abc9c;
+}
+.mainbutton {
+    position: relattive;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 10px 250x;
+    display: inline-block;
+    border-radius: 0.35em;
+    padding: 10px 30px;
+    background-color: #9e0843;
+    border: 0;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.ontouch {
+    background-color: #2C2F36;
+    color: #9e0843;
+    border: 2px solid #9e0843;
+}
+
+.ontouch:hover {
+    background-color: #9e0843;
+    color: white;
+}
+
+/* switches */
+.switch .check::after {
+    background: teal;
+    border-color: dark;
+}
+.switch input[type="checkbox"]:checked ~ .check {
+    background: white;
+}
+.switch input[type="checkbox"]:checked ~ .check::after {
+    border-color: teal;
+    background: dark;
+}
