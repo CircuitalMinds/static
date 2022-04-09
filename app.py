@@ -1,4 +1,5 @@
-from build import Storage, load
+from build import Storage
+from json import load
 from os import system
 from time import sleep
 from sys import argv
