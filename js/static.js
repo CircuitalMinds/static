@@ -1,12 +1,11 @@
 $( function () {
-    let http = $("#http-data")[0];
-    http.get = function ( path, func ) {
+    let f = $("#get-data")[0];
+    f.get = function ( file, y ) {
         $.getJSON(
-            path, data => setTimeout(
-                function () { func ( data ) }
-            )
+            ["data", file].join("/"),
+            function( data ) {
+                setTimeout( function() { y = data } )
+            }
         );
     };
-
-
 });
