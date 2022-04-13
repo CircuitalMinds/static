@@ -7,6 +7,7 @@ from sys import argv
 
 class Static:
     config = {}
+    storage = Storage()
 
     def set_config(self):
         cfg = load(open("data/updater.json"))
@@ -19,7 +20,7 @@ class Static:
 
     def update(self):
         self.set_config()
-        Storage()
+        self.storage.save_info()
         system("bash push.sh")
         print(self.config["message"])
 

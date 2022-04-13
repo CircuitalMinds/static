@@ -5,10 +5,9 @@ from json import dumps
 
 
 class Folder:
-    name, path, files, dirs, total_size, info = None, None, [], [], 0.0, dict()
 
     def __init__(self, name):
-        self.name = name
+        self.name, self.files, self.dirs, self.total_size, self.info = name, [], [], 0.0, dict()
         self.path = join("storage", self.name)
         self.get_data()
 
@@ -32,11 +31,11 @@ class Folder:
 
 class Storage:
     folder_names = ("data", "documents", "scripts", "videos", "pictures")
-
-    def __init__(self):
-        for i in self.folder_names:
-            setattr(self, i, Folder(i))
-        self.save_info()
+    data = Folder("data")
+    documents = Folder("documents")
+    scripts = Folder("scripts")
+    videos = Folder("videos")
+    pictures = Folder("pictures")
 
     def save_info(self):
         content, total_size = dict(files=[], dirs=[]), 0.0
