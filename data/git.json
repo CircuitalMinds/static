@@ -1,0 +1,17 @@
+{
+    "url": "https://github.com",
+    "repos": [
+        "CircuitalMinds/API",
+        "CircuitalMinds/APP",
+        "CircuitalMinds/circuitalminds.github.io",
+        "CircuitalMinds/static",
+        "CircuitalMinds/templates",
+        "alanmatzumiya/cv-latex",
+        "alanmatzumiya/pySpectralPDE"
+    ],
+    "containers": [
+        "CircuitalMinds/jupyter",
+        "alanmatzumiya/pictures",
+        "circuitalmynds/videos"
+    ]
+}
