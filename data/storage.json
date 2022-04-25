@@ -1,114 +1,559 @@
 {
     "content": {
-        "dirs": [
-            {
-                "dirs": [],
-                "files": [
-                    {
-                        "date": "Tue Mar 15 23:03:07 2022",
-                        "name": "test.json",
-                        "path": "storage/data/test.json",
-                        "size": 9.1136e-05
-                    }
-                ],
-                "name": "data",
-                "path": "storage/data",
-                "total_size": 9.1136e-05
-            },
-            {
-                "dirs": [],
-                "files": [
-                    {
-                        "date": "Tue Mar 15 23:03:14 2022",
-                        "name": "thesis_uson",
-                        "path": "storage/documents/thesis_uson",
-                        "size": 0.004194304
-                    },
-                    {
-                        "date": "Tue Mar 15 23:03:07 2022",
-                        "name": "portfolio",
-                        "path": "storage/documents/portfolio",
-                        "size": 0.004194304
-                    },
-                    {
-                        "date": "Tue Mar 15 23:03:07 2022",
-                        "name": "cv.pdf",
-                        "path": "storage/documents/cv.pdf",
-                        "size": 0.207863808
-                    }
-                ],
-                "name": "documents",
-                "path": "storage/documents",
-                "total_size": 0.216252416
-            },
-            {
-                "dirs": [],
-                "files": [
-                    {
-                        "date": "Tue Mar 15 23:03:14 2022",
-                        "name": "my_script.py",
-                        "path": "storage/scripts/my_script.py",
-                        "size": 1.5360000000000002e-05
-                    }
-                ],
-                "name": "scripts",
-                "path": "storage/scripts",
-                "total_size": 1.5360000000000002e-05
-            },
-            {
-                "dirs": [],
-                "files": [
-                    {
-                        "date": "Tue Mar 15 23:03:14 2022",
-                        "name": "Giorgio_Moroder_-_74_Is_the_New_24-7u5c-Qndqio.mp4",
-                        "path": "storage/videos/Giorgio_Moroder_-_74_Is_the_New_24-7u5c-Qndqio.mp4",
-                        "size": 23.652170752
-                    },
-                    {
-                        "date": "Tue Mar 15 23:03:14 2022",
-                        "name": "Give_Life_Back_to_Music-zKSsP2084nU.mp4",
-                        "path": "storage/videos/Give_Life_Back_to_Music-zKSsP2084nU.mp4",
-                        "size": 4.556391424
-                    }
-                ],
-                "name": "videos",
-                "path": "storage/videos",
-                "total_size": 28.208562176
-            },
-            {
-                "dirs": [],
-                "files": [
-                    {
-                        "date": "Tue Mar 15 23:03:14 2022",
-                        "name": "zeta_function.gif",
-                        "path": "storage/pictures/zeta_function.gif",
-                        "size": 8.759566336
-                    },
-                    {
-                        "date": "Tue Mar 15 23:03:14 2022",
-                        "name": "mandelbrot.gif",
-                        "path": "storage/pictures/mandelbrot.gif",
-                        "size": 2.943609856
-                    },
-                    {
-                        "date": "Tue Mar 15 23:03:14 2022",
-                        "name": "julia.gif",
-                        "path": "storage/pictures/julia.gif",
-                        "size": 5.862964224000001
-                    },
-                    {
-                        "date": "Tue Mar 15 23:03:14 2022",
-                        "name": "giorgio.jpg",
-                        "path": "storage/pictures/giorgio.jpg",
-                        "size": 0.014980096000000002
-                    }
-                ],
-                "name": "pictures",
-                "path": "storage/pictures",
-                "total_size": 17.581120512000002
-            }
-        ],
-        "files": []
+        "data": {
+            "dirs": [],
+            "files": [
+                {
+                    "date": "Tue Mar 15 23:03:07 2022",
+                    "name": "test.json",
+                    "path": "storage/data/test.json",
+                    "size": 9.1136e-05
+                }
+            ],
+            "total_size": 9.1136e-05
+        },
+        "documents": {
+            "dirs": [
+                {
+                    "dirs": [],
+                    "files": [
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "estephania_pivac.pdf",
+                            "path": "storage/documents/thesis_uson/estephania_pivac.pdf",
+                            "size": 2.673854464
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:14 2022",
+                            "name": "misael-avendaño-camacho.pdf",
+                            "path": "storage/documents/thesis_uson/misael-avendaño-camacho.pdf",
+                            "size": 0.382681088
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "gabriel-garcia-figueroa.pdf",
+                            "path": "storage/documents/thesis_uson/gabriel-garcia-figueroa.pdf",
+                            "size": 0.89947136
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:11 2022",
+                            "name": "jesus-chaidez-felix.pdf",
+                            "path": "storage/documents/thesis_uson/jesus-chaidez-felix.pdf",
+                            "size": 13.967932416
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:10 2022",
+                            "name": "humberto_ocejo.pdf",
+                            "path": "storage/documents/thesis_uson/humberto_ocejo.pdf",
+                            "size": 1.213826048
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:11 2022",
+                            "name": "jesus_souffle.pdf",
+                            "path": "storage/documents/thesis_uson/jesus_souffle.pdf",
+                            "size": 0.824825856
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:14 2022",
+                            "name": "mauricio_castro.pdf",
+                            "path": "storage/documents/thesis_uson/mauricio_castro.pdf",
+                            "size": 0.6408192
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "dalicia_leal_soto.pdf",
+                            "path": "storage/documents/thesis_uson/dalicia_leal_soto.pdf",
+                            "size": 5.699526656000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "fco-armando-carrillo-navarro.pdf",
+                            "path": "storage/documents/thesis_uson/fco-armando-carrillo-navarro.pdf",
+                            "size": 0.5321134080000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:12 2022",
+                            "name": "luz_almada_valenzuela.pdf",
+                            "path": "storage/documents/thesis_uson/luz_almada_valenzuela.pdf",
+                            "size": 0.6540226560000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "anel_galaviz.pdf",
+                            "path": "storage/documents/thesis_uson/anel_galaviz.pdf",
+                            "size": 0.7469977600000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:10 2022",
+                            "name": "jessica_santana_bejarano.pdf",
+                            "path": "storage/documents/thesis_uson/jessica_santana_bejarano.pdf",
+                            "size": 1.915853824
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:14 2022",
+                            "name": "maria-conde-hernandez.pdf",
+                            "path": "storage/documents/thesis_uson/maria-conde-hernandez.pdf",
+                            "size": 11.101569024000002
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "eduardo_velasco.pdf",
+                            "path": "storage/documents/thesis_uson/eduardo_velasco.pdf",
+                            "size": 0.9870899200000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "cynthia_esquer.pdf",
+                            "path": "storage/documents/thesis_uson/cynthia_esquer.pdf",
+                            "size": 0.8725800960000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "daniel_mora.pdf",
+                            "path": "storage/documents/thesis_uson/daniel_mora.pdf",
+                            "size": 1.5254272000000002
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "bruno_campoy.pdf",
+                            "path": "storage/documents/thesis_uson/bruno_campoy.pdf",
+                            "size": 2.078336
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "cesar_rosales.pdf",
+                            "path": "storage/documents/thesis_uson/cesar_rosales.pdf",
+                            "size": 0.9834106880000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:12 2022",
+                            "name": "luz-del-carmen-rosas-rosas.pdf",
+                            "path": "storage/documents/thesis_uson/luz-del-carmen-rosas-rosas.pdf",
+                            "size": 0.32541184
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "carmen_higuera_chan.pdf",
+                            "path": "storage/documents/thesis_uson/carmen_higuera_chan.pdf",
+                            "size": 0.7248424960000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "eduardo_velasco.pdf.1",
+                            "path": "storage/documents/thesis_uson/eduardo_velasco.pdf.1",
+                            "size": 0.9870899200000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "gabriel_salcedo.pdf",
+                            "path": "storage/documents/thesis_uson/gabriel_salcedo.pdf",
+                            "size": 4.0546457600000005
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:14 2022",
+                            "name": "martin_carrillo.pdf",
+                            "path": "storage/documents/thesis_uson/martin_carrillo.pdf",
+                            "size": 0.7270164480000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:11 2022",
+                            "name": "jocelyn_castro.pdf",
+                            "path": "storage/documents/thesis_uson/jocelyn_castro.pdf",
+                            "size": 2.551868416
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:11 2022",
+                            "name": "jorge_espindola.pdf",
+                            "path": "storage/documents/thesis_uson/jorge_espindola.pdf",
+                            "size": 4.607694848
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:14 2022",
+                            "name": "marla_arcega.pdf",
+                            "path": "storage/documents/thesis_uson/marla_arcega.pdf",
+                            "size": 0.5488814080000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "alejandra_morales.pdf",
+                            "path": "storage/documents/thesis_uson/alejandra_morales.pdf",
+                            "size": 0.8681666560000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "beatriz_ramonetti.pdf",
+                            "path": "storage/documents/thesis_uson/beatriz_ramonetti.pdf",
+                            "size": 2.16507904
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "cecilia-palafox-duarte.pdf",
+                            "path": "storage/documents/thesis_uson/cecilia-palafox-duarte.pdf",
+                            "size": 2.9805967360000003
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:12 2022",
+                            "name": "jorge_lopez_renteria.pdf",
+                            "path": "storage/documents/thesis_uson/jorge_lopez_renteria.pdf",
+                            "size": 1.733644288
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:14 2022",
+                            "name": "maria_elena_martinez.pdf",
+                            "path": "storage/documents/thesis_uson/maria_elena_martinez.pdf",
+                            "size": 0.6582876160000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:11 2022",
+                            "name": "jesus_noyola.pdf",
+                            "path": "storage/documents/thesis_uson/jesus_noyola.pdf",
+                            "size": 2.060152832
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "alejandro_duenas.pdf",
+                            "path": "storage/documents/thesis_uson/alejandro_duenas.pdf",
+                            "size": 1.0135736320000002
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "claudia_hawks.pdf",
+                            "path": "storage/documents/thesis_uson/claudia_hawks.pdf",
+                            "size": 7.887430656
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:14 2022",
+                            "name": "mayra_mazon.pdf",
+                            "path": "storage/documents/thesis_uson/mayra_mazon.pdf",
+                            "size": 0.9377269760000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "adriana_ocejo_monje.pdf",
+                            "path": "storage/documents/thesis_uson/adriana_ocejo_monje.pdf",
+                            "size": 2.376532992
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:12 2022",
+                            "name": "julio_leyva.pdf",
+                            "path": "storage/documents/thesis_uson/julio_leyva.pdf",
+                            "size": 0.7639490560000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "alejandro-gomez-jurado.pdf",
+                            "path": "storage/documents/thesis_uson/alejandro-gomez-jurado.pdf",
+                            "size": 0.538532864
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "hector_hernandez.pdf",
+                            "path": "storage/documents/thesis_uson/hector_hernandez.pdf",
+                            "size": 4.44053504
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "francisco_figueroa.pdf",
+                            "path": "storage/documents/thesis_uson/francisco_figueroa.pdf",
+                            "size": 1.2378204160000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:14 2022",
+                            "name": "marysol-navarro-burruel.pdf",
+                            "path": "storage/documents/thesis_uson/marysol-navarro-burruel.pdf",
+                            "size": 0.720800768
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "dante_teran.pdf",
+                            "path": "storage/documents/thesis_uson/dante_teran.pdf",
+                            "size": 3.207518208
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:11 2022",
+                            "name": "joaquin-lopez-borbon.pdf",
+                            "path": "storage/documents/thesis_uson/joaquin-lopez-borbon.pdf",
+                            "size": 0.8399626240000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:10 2022",
+                            "name": "jairo_rodriguez.pdf",
+                            "path": "storage/documents/thesis_uson/jairo_rodriguez.pdf",
+                            "size": 0.9104107520000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:12 2022",
+                            "name": "juan_andres_castillo.pdf",
+                            "path": "storage/documents/thesis_uson/juan_andres_castillo.pdf",
+                            "size": 2.8748738560000002
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:10 2022",
+                            "name": "jessica_leyva.pdf",
+                            "path": "storage/documents/thesis_uson/jessica_leyva.pdf",
+                            "size": 0.304550912
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "david_baca_carrasco.pdf",
+                            "path": "storage/documents/thesis_uson/david_baca_carrasco.pdf",
+                            "size": 1.449691136
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "arling_vazquez.pdf",
+                            "path": "storage/documents/thesis_uson/arling_vazquez.pdf",
+                            "size": 1.1597578240000002
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:12 2022",
+                            "name": "jose_ruiz_pantaleon.pdf",
+                            "path": "storage/documents/thesis_uson/jose_ruiz_pantaleon.pdf",
+                            "size": 2.2307983360000003
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:08 2022",
+                            "name": "alejandra_fonseca_morales.pdf",
+                            "path": "storage/documents/thesis_uson/alejandra_fonseca_morales.pdf",
+                            "size": 0.8936785920000001
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:09 2022",
+                            "name": "gabriel_orozco.pdf",
+                            "path": "storage/documents/thesis_uson/gabriel_orozco.pdf",
+                            "size": 0.7583488
+                        }
+                    ],
+                    "total_size": 107.24020940799998
+                },
+                {
+                    "dirs": [
+                        {
+                            "dirs": [],
+                            "files": [
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "python_courses1.pdf",
+                                    "path": "storage/documents/portfolio/records/python_courses1.pdf",
+                                    "size": 0.558307328
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "python_courses2.pdf",
+                                    "path": "storage/documents/portfolio/records/python_courses2.pdf",
+                                    "size": 0.9647247360000001
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "lab_iq.png",
+                                    "path": "storage/documents/portfolio/records/lab_iq.png",
+                                    "size": 3.7538560000000003
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "thesis-02.png",
+                                    "path": "storage/documents/portfolio/records/thesis-02.png",
+                                    "size": 0.7971461120000001
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "astronomy_courses.pdf",
+                                    "path": "storage/documents/portfolio/records/astronomy_courses.pdf",
+                                    "size": 1.6374456320000002
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "constance_physics.png",
+                                    "path": "storage/documents/portfolio/records/constance_physics.png",
+                                    "size": 2.496934912
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "physics_convocatoria.pdf",
+                                    "path": "storage/documents/portfolio/records/physics_convocatoria.pdf",
+                                    "size": 0.8665344
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "thesis-01.png",
+                                    "path": "storage/documents/portfolio/records/thesis-01.png",
+                                    "size": 0.058285056
+                                }
+                            ],
+                            "total_size": 11.133234176000002
+                        },
+                        {
+                            "dirs": [],
+                            "files": [
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "qrcode.png",
+                                    "path": "storage/documents/portfolio/images/qrcode.png",
+                                    "size": 0.003002368
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "me.jpeg",
+                                    "path": "storage/documents/portfolio/images/me.jpeg",
+                                    "size": 0.009976832000000001
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "banner.jpg",
+                                    "path": "storage/documents/portfolio/images/banner.jpg",
+                                    "size": 0.08222412800000001
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "avatar.png",
+                                    "path": "storage/documents/portfolio/images/avatar.png",
+                                    "size": 0.119936
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "banner-collage.png",
+                                    "path": "storage/documents/portfolio/images/banner-collage.png",
+                                    "size": 1.259737088
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "organization.png",
+                                    "path": "storage/documents/portfolio/images/organization.png",
+                                    "size": 0.040932352000000005
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "thesis-02.png",
+                                    "path": "storage/documents/portfolio/images/thesis-02.png",
+                                    "size": 0.7971461120000001
+                                },
+                                {
+                                    "date": "Tue Mar 15 23:03:07 2022",
+                                    "name": "thesis-01.png",
+                                    "path": "storage/documents/portfolio/images/thesis-01.png",
+                                    "size": 0.058285056
+                                }
+                            ],
+                            "total_size": 2.3712399360000003
+                        }
+                    ],
+                    "files": [
+                        {
+                            "date": "Tue Mar 15 23:03:07 2022",
+                            "name": "cv.tex",
+                            "path": "storage/documents/portfolio/cv.tex",
+                            "size": 0.044596224000000004
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:07 2022",
+                            "name": "cv.out",
+                            "path": "storage/documents/portfolio/cv.out",
+                            "size": 0.0
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:07 2022",
+                            "name": "cv.pdf",
+                            "path": "storage/documents/portfolio/cv.pdf",
+                            "size": 9.9566336
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:07 2022",
+                            "name": "cv.log",
+                            "path": "storage/documents/portfolio/cv.log",
+                            "size": 0.04795904
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:07 2022",
+                            "name": "cv.aux",
+                            "path": "storage/documents/portfolio/cv.aux",
+                            "size": 0.00082432
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:07 2022",
+                            "name": "piechart.tex",
+                            "path": "storage/documents/portfolio/piechart.tex",
+                            "size": 0.00256512
+                        },
+                        {
+                            "date": "Tue Mar 15 23:03:07 2022",
+                            "name": "cv.synctex.gz",
+                            "path": "storage/documents/portfolio/cv.synctex.gz",
+                            "size": 0.069917696
+                        }
+                    ],
+                    "total_size": 23.626970112000002
+                }
+            ],
+            "files": [
+                {
+                    "date": "Tue Mar 15 23:03:07 2022",
+                    "name": "cv.pdf",
+                    "path": "storage/documents/cv.pdf",
+                    "size": 0.207863808
+                }
+            ],
+            "total_size": 131.075043328
+        },
+        "pictures": {
+            "dirs": [],
+            "files": [
+                {
+                    "date": "Tue Mar 15 23:03:14 2022",
+                    "name": "zeta_function.gif",
+                    "path": "storage/pictures/zeta_function.gif",
+                    "size": 8.759566336
+                },
+                {
+                    "date": "Tue Mar 15 23:03:14 2022",
+                    "name": "mandelbrot.gif",
+                    "path": "storage/pictures/mandelbrot.gif",
+                    "size": 2.943609856
+                },
+                {
+                    "date": "Tue Mar 15 23:03:14 2022",
+                    "name": "julia.gif",
+                    "path": "storage/pictures/julia.gif",
+                    "size": 5.862964224000001
+                },
+                {
+                    "date": "Tue Mar 15 23:03:14 2022",
+                    "name": "giorgio.jpg",
+                    "path": "storage/pictures/giorgio.jpg",
+                    "size": 0.014980096000000002
+                }
+            ],
+            "total_size": 17.581120512000002
+        },
+        "scripts": {
+            "dirs": [],
+            "files": [
+                {
+                    "date": "Tue Mar 15 23:03:14 2022",
+                    "name": "my_script.py",
+                    "path": "storage/scripts/my_script.py",
+                    "size": 1.5360000000000002e-05
+                }
+            ],
+            "total_size": 1.5360000000000002e-05
+        },
+        "videos": {
+            "dirs": [],
+            "files": [
+                {
+                    "date": "Tue Mar 15 23:03:14 2022",
+                    "name": "Giorgio_Moroder_-_74_Is_the_New_24-7u5c-Qndqio.mp4",
+                    "path": "storage/videos/Giorgio_Moroder_-_74_Is_the_New_24-7u5c-Qndqio.mp4",
+                    "size": 23.652170752
+                },
+                {
+                    "date": "Tue Mar 15 23:03:14 2022",
+                    "name": "Give_Life_Back_to_Music-zKSsP2084nU.mp4",
+                    "path": "storage/videos/Give_Life_Back_to_Music-zKSsP2084nU.mp4",
+                    "size": 4.556391424
+                }
+            ],
+            "total_size": 28.208562176
+        }
     },
-    "total_size": 46.0060416
+    "total_size": 176.864832512
 }

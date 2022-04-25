@@ -1,0 +1,31 @@
+{    
+    "repo": "https://github/CircuitalMinds/static",            
+    "command": {
+        "push": "bash ./push.sh"
+    },
+    "timer": {
+        "lastupdate": null,
+        "delay": "00:01:00",      
+        "message": {
+            "update": "data updated",
+            "push": "repository pushed"
+        },
+        "status": "on"
+    },
+    "storage": {
+        "path": "./storage",
+        "folders": [
+            "data",            
+            "documents",            
+            "pictures", 
+            "videos", 
+            "scripts"
+        ],
+        "info": {
+            "file": "./data/storage.json",
+            "config": {
+                "indent": 4, "sort_keys": true, "ensure_ascii": false        
+            }
+        }
+    }
+}
