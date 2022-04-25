@@ -4,7 +4,6 @@ from time import ctime
 from json import dumps, load
 from time import sleep
 from sys import argv
-from tkinter.messagebox import NO
 cfg = load(open("conf.json"))
 
 
