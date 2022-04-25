@@ -1,17 +1,17 @@
 {
     "url": "https://github.com",
-    "repos": [
-        "CircuitalMinds/API",
-        "CircuitalMinds/APP",
-        "CircuitalMinds/circuitalminds.github.io",
-        "CircuitalMinds/static",
-        "CircuitalMinds/templates",
-        "alanmatzumiya/cv-latex",
-        "alanmatzumiya/pySpectralPDE"
-    ],
-    "containers": [
-        "CircuitalMinds/jupyter",
-        "alanmatzumiya/pictures",
-        "circuitalmynds/videos"
-    ]
+    "repos": {
+        "api": "CircuitalMinds/API",
+        "app": "CircuitalMinds/APP",
+        "site": "CircuitalMinds/circuitalminds.github.io",
+        "static": "CircuitalMinds/static",
+        "templates": "CircuitalMinds/templates",
+        "cv": "alanmatzumiya/cv-latex",
+        "pyspectral": "alanmatzumiya/pySpectralPDE"
+    },
+    "containers": {
+        "jupyter": "CircuitalMinds/jupyter",
+        "pictures": "alanmatzumiya/pictures",
+        "videos": "circuitalmynds/videos"
+    }
 }
