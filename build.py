@@ -10,7 +10,6 @@ cfg = load(open("conf.json"))
 class Storage:
     path, folders = (cfg["storage"]["path"], cfg["storage"]["folders"])
 
-
     def __init__(self):
         self.content = dict()
         self.update()
