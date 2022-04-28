@@ -5,7 +5,7 @@
     },
     "timer": {
         "lastupdate": null,
-        "delay": "00:01:00",      
+        "delay": "00:05:00",
         "message": {
             "update": "data updated",
             "push": "repository pushed"
