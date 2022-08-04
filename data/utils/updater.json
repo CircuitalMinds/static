@@ -1,7 +1,0 @@
-{
-  "timer": {
-    "unit":  "minutes",
-    "value": 5
-  },
-  "message": "repository updated successfully"
-}
