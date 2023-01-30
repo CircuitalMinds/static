@@ -28,3 +28,23 @@ function getVideoSearch ( videolist ) {
         noResultsText: "<li class='button card-content bg-darkTeal bg-dark-hover fg-light'>Video Not Found</li>"
     });
 };
+
+function alphabet ( from_letter, to_letter ) {
+
+  var letters = "abcdefghijklmnopqrstuvwxyz";
+
+  if ( from_letter == undefined && to_letter == undefined ) {
+
+  	return letters.split("");
+
+  } else if ( from_letter != undefined && to_letter == undefined ) {
+
+    return letters[from_letter];
+
+  } else {
+
+    return letters.split("").slice( from_letter, to_letter );
+
+	};
+
+};

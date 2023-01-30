@@ -1,20 +1,48 @@
-let GitHub = {};
-GitHub.Url = "https://github.com";
+var git = {
+  url: "https://github.com",
+  open: function ( path ) {
 
-GitHub.getPage = function ( Path ) {
-    window.location = [this.Url, Path].join("/");
-};
-
-GitHub.createRepo = function ( Name ) {
-    if ( document.URL == [this.Url, "new"].join("/") ) {
-        createBtn = document.querySelector('button.btn-primary');
-        createBtn.disabled = false;
-        ["name", "description"].map( e => document.getElementById("repository_" + e).value = Name );
-        ["visibility_public", "auto_init"].map( e => document.getElementById("repository_" + e).checked = "checked" );
+    if ( path != undefined ) {
+        window.location = [
+            this.url, ( path.startsWith("/") ) ? path.slice(1) : path
+        ].join("/");
     } else {
-        this.getPage("new");
+        window.location( this.url );
     };
+
+  },
+  new_repo: function ( name ) {
+
+    if ( document.URL != [this.url, "new"].join("/") ) {
+    	this.open("new");
+    };
+
+    setTimeout( function() {
+
+    	var btn = document.querySelector('button.btn-primary');
+      btn.disabled = false;
+
+      ["name", "description"].map(
+        e => document.getElementById(
+          "repository_" + e
+        ).value = name
+      );
+
+      ["visibility_public", "auto_init"].map(
+        e => document.getElementById(
+          "repository_" + e
+        ).checked = "checked"
+      );
+
+      setTimeout( function () {
+        document.getElementById("new_repository").submit();
+      }, 1e3 );
+
+    }, 1e3 );
+
+  }
 };
+
 
 function createSocket ( id ) {
   	var socket = {
